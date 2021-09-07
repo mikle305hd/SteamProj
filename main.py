@@ -3,6 +3,13 @@ import requests
 
 
 def main():
+    try:
+        auth = steam_auth.SteamAuth('mikle305hd', '213', '12345')
+    except Exception as e:
+        print(e)
+
+    auth.do()
+
     while True:
         print('Введите комманду: ')
         command = input().lower()
